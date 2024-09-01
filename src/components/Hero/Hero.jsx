@@ -17,12 +17,12 @@ const Hero = ({heroData, heroCount, setHeroCount, playStatus, setPlayStatus}) =>
       </div>
       <div className="hero-dot-play flex justify-between mb-10">
         <ul className='flex gap-5 text-white text-lg mt-12 items-center '>
-          <li onClick={() => setHeroCount(0)} className={` size-3 cursor-pointer bg-white rounded-full ${heroCount === 0 ? "bg-orange-700" : ""}`} ></li>
-          <li onClick={() => setHeroCount(1)} className={` size-3 cursor-pointer bg-white rounded-full ${heroCount === 1 ? "bg-orange-700" : ""}`}></li>
-          <li onClick={() => setHeroCount(2)} className={` size-3 cursor-pointer bg-white rounded-full ${heroCount === 2 ? "bg-orange-700" : ""}`}></li>
+          <li onClick={() => setHeroCount(0)} className={` size-3 cursor-pointer  rounded-full ${heroCount === 0 ? "bg-orange-700" : "bg-gray-500"}`} ></li>
+          <li onClick={() => setHeroCount(1)} className={` size-3 cursor-pointer  rounded-full ${heroCount === 1 ? "bg-orange-700" : "bg-gray-500"}`}></li>
+          <li onClick={() => setHeroCount(2)} className={` size-3 cursor-pointer  rounded-full ${heroCount === 2 ? "bg-orange-700" : "bg-gray-500"}`}></li>
         </ul>
       <div className="hero-play flex items-center mr-14 gap-4">
-        <img onClick={()=> setPlayStatus(!playStatus)} src={playStatus? pause_icon: play_icon} alt="" className='w-14' />
+        <img onClick={()=> setPlayStatus(!playStatus)} src={playStatus? pause_icon: play_icon} alt="" className='w-14 cursor-pointer' />
         <p className='text-white mr-3'>See the video</p>
       </div>
       </div>
